@@ -6,4 +6,5 @@ class ConstantValue {
   static const String appTitle = "Weather App";
   static const String weatherForecast = "Hourly Forecast";
   static const String additionalInfo = "Additional Information";
+
 }
