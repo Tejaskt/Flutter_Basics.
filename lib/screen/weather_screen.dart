@@ -20,7 +20,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     try {
       final result = await http.get(
         Uri.parse(
-          'https://api.openweathermap.org/data/2.5/forecast?q=$cityName&APPID=',
+          'https://api.openweathermap.org/data/2.5/forecast?q=$cityName&APPID=${ConstantValue.apiKey}',
         ),
       );
 
