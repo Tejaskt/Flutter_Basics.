@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:ui';
-import 'package:demo_flutter/screen/string.dart';
+import 'package:demo_flutter/demo/screen/string.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
@@ -13,6 +13,8 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
+
+
   late Future<Map<String, dynamic>> weather;
   String cityName = "Rajkot";
 

@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:demo_flutter/screen/currency_converter.dart';
+import 'package:demo_flutter/demo/screen/currency_converter.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

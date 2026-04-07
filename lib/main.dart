@@ -1,5 +1,7 @@
-import 'package:demo_flutter/screen/weather_screen.dart';
+import 'package:demo_flutter/bloc/counter_cubit.dart';
+import 'package:demo_flutter/bloc/view/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main(){
   runApp(const MyApp());
@@ -10,11 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo App',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(useMaterial3: true),
-      home: const WeatherScreen(),  // to change the screen call it here.
+    return BlocProvider(
+      create: (_) => CounterCubit(),
+      child: MaterialApp(
+        title: 'Bloc Provider Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(useMaterial3: true),
+        home: const HomeView(),  // to change the screen call it here.
+      ),
     );
   }
 }
