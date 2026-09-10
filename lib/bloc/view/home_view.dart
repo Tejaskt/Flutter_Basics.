@@ -1,4 +1,4 @@
-import 'package:demo_flutter/bloc/counter_cubit.dart';
+import 'package:demo_flutter/bloc/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -8,7 +8,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final counter = BlocProvider.of<CounterCubit>(context);
+    // final counter = BlocProvider.of<CounterCubit>(context);
 
     return Scaffold(
       appBar: AppBar(title: Text('Cubit Demo')),
@@ -16,9 +16,9 @@ class HomeView extends StatelessWidget {
         mainAxisAlignment: .end,
         spacing: 8,
         children: [
-          FloatingActionButton(onPressed: () => counter.increment(),
+          FloatingActionButton(onPressed: () => context.read<CounterCubit>().increment(), //counter.increment(),
             child: Icon(Icons.add),),
-          FloatingActionButton(onPressed: () => counter.decrement(),
+          FloatingActionButton(onPressed: () => context.read<CounterCubit>().decrement(),//counter.decrement(),
             child: Icon(Icons.horizontal_rule),),
         ],
       ),
